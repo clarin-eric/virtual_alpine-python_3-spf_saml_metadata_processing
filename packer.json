@@ -1,0 +1,38 @@
+{
+    "builders": [
+        {
+            "export_path": "{{template_dir}}/images/latest.tar",
+            "image": "docker.clarin.eu/alpine-python_3:latest",
+            "run_command": [
+                "-d",
+                "-i",
+                "-t",
+                "{{.Image}}",
+                "/bin/sh"
+            ],
+            "pull": false,
+            "type": "docker",
+            "volumes": {"{{template_dir}}/resources/pyff_config/": "/srv/pyff_config/:ro"}
+        }
+    ],
+    "post-processors": [
+        {
+            "repository": "docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing",
+            "tag": "latest",
+            "type": "docker-import"
+        }
+    ],
+    "provisioners": [
+        {
+            "destination": "/tmp/SPF_SAML_metadata_processor-1.0.dev0.tar.gz",
+            "source": "{{template_dir}}/resources/SPF_SAML_metadata_processor/dist/SPF_SAML_metadata_processor-1.0.dev0.tar.gz",
+            "type": "file"
+        },
+        {
+            "scripts": [
+                "provision.sh"
+            ],
+            "type": "shell"
+        }
+    ]
+}
