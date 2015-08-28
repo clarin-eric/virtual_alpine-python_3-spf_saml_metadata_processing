@@ -25,12 +25,12 @@
     "provisioners": [
         {
             "destination": "/tmp/SPF_SAML_metadata_processor-1.0.dev0.tar.gz",
-            "source": "resources/SPF_SAML_metadata_processor/dist/SPF_SAML_metadata_processor-1.0.dev0.tar.gz",
+            "source": "{{template_dir}}/resources/SPF_SAML_metadata_processor/dist/SPF_SAML_metadata_processor-1.0.dev0.tar.gz",
             "type": "file"
         },
         {
             "scripts": [
-                "provision.sh"
+                "{{template_dir}}/provision.sh"
             ],
             "type": "shell"
         }
