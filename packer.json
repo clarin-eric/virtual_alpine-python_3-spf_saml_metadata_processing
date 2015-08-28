@@ -13,6 +13,19 @@
             "pull": false,
             "type": "docker",
             "volumes": {"{{template_dir}}/resources/pyff_config/": "/srv/pyff_config/:ro"}
+        },
+        {
+            "export_path": "{{template_dir}}/images/latest.tar",
+            "image": "docker.clarin.eu/alpine-python_3:latest",
+            "run_command": [
+                "-d",
+                "-i",
+                "-t",
+                "{{.Image}}",
+                "/bin/sh"
+            ],
+            "type": "docker",
+            "name": "docker_plus_import"
         }
     ],
     "post-processors": [
