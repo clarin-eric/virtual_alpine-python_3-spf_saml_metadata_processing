@@ -1,3 +1,7 @@
 [submodule "resources/SPF_SAML_metadata_processor"]
 	path = resources/SPF_SAML_metadata_processor
 	url = https://github.com/clarin-eric/SPF_SAML_metadata_processor
+[submodule "resources/virtual_alpine-python_3"]
+	path = resources/virtual_alpine-python_3
+	url = https://github.com/clarin-eric/virtual_alpine-python_3
+	branch = master
