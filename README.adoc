@@ -18,7 +18,7 @@
 ----
 git submodule update --init --recursive
 ----
-* Build the dependency https://github.com/clarin-eric/SPF_SAML_metadata_processor[`SPF_SAML_metadata_processor`].
+* Build the dependency (create a source distribution) https://github.com/clarin-eric/SPF_SAML_metadata_processor[`SPF_SAML_metadata_processor`] in `resources/SPF_SAML_metadata_processor/`.
 * To pull in the latest versions (on the `master` branch) of the submodules, issue:
 +
 [source,Sh]
