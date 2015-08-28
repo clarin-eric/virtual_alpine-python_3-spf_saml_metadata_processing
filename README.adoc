@@ -11,8 +11,16 @@
 +
 [source,Sh]
 ----
-git submodule init &&
-git submodule update
+git submodule add --branch master 'https://github.com/clarin-eric/virtual_alpine'
+
+git submodule update --init --recursive
+git submodule foreach --recursive 'git checkout master && git pull'
+
+For later updates:
+git submodule update --recursive
+git submodule foreach 'echo $path `git rev-parse HEAD`'
+
+find . (git submodule --quiet foreach --recursive 'pwd') -maxdepth 1 -type f -name 'packer.json' | tac | xargs -n 1 packer build
 ----
 +
 * Ensure you have built the Docker container image this virtualized software depends on. You can find the dependency's Docker tag in link:packer.json[packer.json] at ["builders"][0]["image"]. You can find its repository among the repositories under this organization on GitHub.

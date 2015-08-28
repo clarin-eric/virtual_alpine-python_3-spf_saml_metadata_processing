@@ -19,7 +19,8 @@
         {
             "repository": "docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing",
             "tag": "latest",
-            "type": "docker-import"
+            "type": "docker-import",
+            "only": ["docker_plus_import"]
         }
     ],
     "provisioners": [
