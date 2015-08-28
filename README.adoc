@@ -10,22 +10,22 @@
 
 == To build
 
-* Clone this repository.
+* Clone this repository (once).
 * `cd` to its root directory.
-* Retrieve the submodules under `resources/`:
+* Retrieve the submodules under `resources/` (once):
 +
 [source,Sh]
 ----
 git submodule update --init --recursive
 ----
-* https://github.com/clarin-eric/SPF_SAML_metadata_processor[Build the dependency `SPF_SAML_metadata_processor`].
+* Build the dependency https://github.com/clarin-eric/SPF_SAML_metadata_processor[`SPF_SAML_metadata_processor`].
 * To pull in the latest versions (on the `master` branch) of the submodules, issue:
 +
 [source,Sh]
 ----
 git submodule update --recursive --remote
 ----
-* To build the virtualized application up from all Docker container images it depends on, issue once per shell session:
+* To build the virtualized application up from all Docker container images it depends on, issue (once per shell session):
 +
 [source,Sh]
 ----
@@ -39,9 +39,9 @@ build_all() {
     done
     set +e
 }
+----
 +
 * From then on you may issue (as long as your current working directory mentioned in the first steps is still correct) `build_all ;` to start the build.
-----
 
 == To run
 
