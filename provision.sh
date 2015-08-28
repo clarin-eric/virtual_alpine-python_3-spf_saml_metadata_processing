@@ -24,6 +24,7 @@ pip --no-cache-dir --isolated install 'pyff'
 # deactivate
 
 apk --verbose --progress del 'libxml2-dev' 'libxslt-dev' 'build-base' 'yaml-dev' 'python-dev' 'python3-dev'
+apk cache --purge clean
 
 mkdir -p '/srv/www/infra.clarin.eu/aai/'
 # TODO: permissions, ownership
