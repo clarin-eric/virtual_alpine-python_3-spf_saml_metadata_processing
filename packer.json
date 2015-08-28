@@ -24,7 +24,9 @@
                 "{{.Image}}",
                 "/bin/sh"
             ],
+            "pull": false,
             "type": "docker",
+            "volumes": {"{{template_dir}}/resources/pyff_config/": "/srv/pyff_config/:ro"},
             "name": "docker_plus_import"
         }
     ],
