@@ -12,7 +12,7 @@
             ],
             "pull": false,
             "type": "docker",
-            "volumes": {"{{template_dir}}/resources/pyff_config/": "/srv/pyff_config/:ro"}
+            "volumes": {"{{template_dir}}/resources/pyFF_config/": "/srv/pyFF_config/:ro"}
         }
     ],
     "post-processors": [

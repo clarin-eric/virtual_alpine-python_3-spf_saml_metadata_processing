@@ -59,14 +59,13 @@ Issue:
 
 [source,Sh]
 ----
-docker run -v $(realpath resources/pyff_config/)':/srv/pyff_config/' -i -t --entrypoint='/bin/sh' 'docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing'
+docker run -v $(realpath resources/pyFF_config/)':/srv/pyFF_config/' -i -t --entrypoint='/bin/sh' 'docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing'
 ----
 
 ////
-
 TODO:
 Packer should not rebuild artifacts.
-document pyff
+
 -v (realpath resources/SAML_metadata_QA_validator/)':/opt/SAML_metadata_QA_validator/:ro'
 /opt/SAML_metadata_QA_validator/
 
