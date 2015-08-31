@@ -54,8 +54,9 @@ docker import - 'docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing:l
 ----
 
 === ... interactively
+
 Issue:
-+
+
 [source,Sh]
 ----
 docker run -v $(realpath resources/pyff_config/)':/srv/pyff_config/' -i -t --entrypoint='/bin/sh' 'docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing'
