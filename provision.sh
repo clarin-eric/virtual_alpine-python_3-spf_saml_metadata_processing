@@ -9,7 +9,6 @@ apk --verbose --progress add --upgrade 'rsync' 'subversion' 'curl' 'libxml2-dev'
 
 # pyvenv '/opt/Python/SPF_SAML_metadata_processing/'
 # pyvenv '/opt/Python/pyff/'
-stat '/tmp/SPF_SAML_metadata_processor-1.0.dev0.tar.gz'
 
 # . '/opt/Python/SPF_SAML_metadata_processing/bin/activate'
 pip3 --no-cache-dir --isolated install '/tmp/SPF_SAML_metadata_processor-1.0.dev0.tar.gz'
