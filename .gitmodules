@@ -5,7 +5,7 @@
 	path = resources/virtual_alpine-python_3
 	url = https://github.com/clarin-eric/virtual_alpine-python_3
 	branch = master
-[submodule "pyFF_config"]
-	path = pyFF_config
+[submodule "resources/pyFF_config"]
+	path = resources/pyFF_config
 	url = https://github.com/clarin-eric/pyFF_config
 	branch = master
