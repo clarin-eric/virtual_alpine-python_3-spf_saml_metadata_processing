@@ -24,15 +24,15 @@ This virtualized set of services bundles the CLARIN SAML metadata processing set
 ----
 docker create \
     --entrypoint='/bin/sh' \
-    --name='alpine-python_3-spf_saml_metadata_processing-latest' \
+    --name='alpine-python_3-spf_saml_metadata_processing' \
     --tty=true \
     --volume="$(readlink -f 'resources/pyFF_config/'):/srv/pyFF_config/" \
-    docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing'
+    'docker.clarin.eu/alpine-python_3-spf_saml_metadata_processing'
 ----
 
 == To run
 
 [source,Sh]
 ----
-docker start 'alpine-python_3-spf_saml_metadata_processing-latest'
+docker start 'alpine-python_3-spf_saml_metadata_processing'
 ----
